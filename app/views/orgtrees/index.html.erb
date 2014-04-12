@@ -1,0 +1,43 @@
+<h1>Listing orgtrees</h1>
+<div class="container">
+  <table class="table table-condensed">
+      <tr>
+        <th>Id</th>
+        <th>Parent</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Templatename</th>
+        <th>Href</th>
+        <th>Itemtitlecolor</th>
+        <th>User</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+    <% @orgtrees.each do |orgtree| %>
+      <tr>
+        <td><%= orgtree.id %></td>
+        <td><%= orgtree.parent.inspect %></td>
+        <td><%= orgtree.title %></td>
+        <td><%= orgtree.description %></td>
+        <td><%= orgtree.image %></td>
+        <td><%= orgtree.phone %></td>
+        <td><%= orgtree.email %></td>
+        <td><%= orgtree.templateName %></td>
+        <td><%= orgtree.href %></td>
+        <td><%= orgtree.itemTitleColor %></td>
+        <td><%= orgtree.user_id %></td>
+        <td><%= link_to 'Show', orgtree %></td>
+        <td><%= link_to 'Edit', edit_orgtree_path(orgtree) %></td>
+        <td><%= link_to 'Destroy', orgtree, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-mini" %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+<br />
+
+<%= link_to 'New Orgtree', new_orgtree_path %>

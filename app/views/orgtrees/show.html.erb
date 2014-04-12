@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Parent:</b>
+  <%= @orgtree.parent %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @orgtree.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @orgtree.description %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @orgtree.image %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @orgtree.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @orgtree.email %>
+</p>
+
+<p>
+  <b>Templatename:</b>
+  <%= @orgtree.templateName %>
+</p>
+
+<p>
+  <b>Href:</b>
+  <%= @orgtree.href %>
+</p>
+
+<p>
+  <b>Itemtitlecolor:</b>
+  <%= @orgtree.itemTitleColor %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @orgtree.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_orgtree_path(@orgtree) %> |
+<%= link_to 'Back', orgtrees_path %>
